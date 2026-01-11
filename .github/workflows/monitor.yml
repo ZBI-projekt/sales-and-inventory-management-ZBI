@@ -46,7 +46,7 @@ jobs:
           fi
 
       - name: Create Alert in Azure DevOps
-        if: steps.ping.outputs.status == 'down'
+        if: failure()
         env:
           AZURE_DEVOPS_EXT_PAT: ${{ secrets.ADO_PAT }}
         run: |
