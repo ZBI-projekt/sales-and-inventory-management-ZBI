@@ -63,3 +63,4 @@ jobs:
               <b>Status:</b> App is not responding.<br> \
               <b>Code HTTP:</b> ${{ env.DETECTED_CODE }}<br> \
               <b>Time:</b> $TIMESTAMP<br><br> \
+              <b>GHA Logs:</b> ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
