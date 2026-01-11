@@ -42,6 +42,7 @@ jobs:
           else
             echo "App is not responding. Code: $HTTP_CODE"
             echo "status=down" >> $GITHUB_OUTPUT
+            exit 1
           fi
 
       - name: Create Alert in Azure DevOps
