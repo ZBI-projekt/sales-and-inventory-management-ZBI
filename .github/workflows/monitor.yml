@@ -4,7 +4,7 @@ on:
 #  schedule:
 #    -cron: '*/60 * * * *'
 
-  push: # testowe
+  push: # test
 
   workflow_dispatch:
 
