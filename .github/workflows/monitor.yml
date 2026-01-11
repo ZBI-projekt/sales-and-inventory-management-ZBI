@@ -15,7 +15,7 @@ on:
       - completed
 
 env:
-  TARGET_URL: "https://zbi-inventory-app-axfcfebbawe7abet.italynorth-01.azurewebsites.net/"
+  TARGET_URL: "http://zbi-inventory-app-axfcfebbawe7abet.italynorth-01.azurewebsites.net/accounts/login/"
 
   ADO_ORG: "ZBI-projekt"
   ADO_PROJECT: "ZBI-projekt"
