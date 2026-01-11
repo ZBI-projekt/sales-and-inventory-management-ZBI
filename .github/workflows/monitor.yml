@@ -32,9 +32,7 @@ jobs:
           echo "Checking availability: ${{ env.TARGET_URL }}"
           HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" ${{ env.TARGET_URL }})
           
-          # Zapisz kod do zmiennych środowiskowych, aby był dostępny w następnym kroku (nawet przy błędzie)
           echo "detected_code=$HTTP_CODE" >> $GITHUB_OUTPUT 
-        #  echo "DETECTED_CODE=$HTTP_CODE" >> $GITHUB_ENV
 
           if [ "$HTTP_CODE" -eq 200 ]; then
             echo "App is working normally (HTTP 200)"
@@ -42,7 +40,6 @@ jobs:
           else
             echo "::error::App is not responding. Code: $HTTP_CODE"
            # echo "status=down" >> $GITHUB_OUTPUT
-            # To jest kluczowe - exit 1 powoduje, że krok kończy się statusem 'failure'
             exit 1
           fi
 
